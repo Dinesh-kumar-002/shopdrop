@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopDrop</title>
     <script src="https://kit.fontawesome.com/92d73c3f26.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -19,10 +20,10 @@
 
         <div class="navsmall">
             <div class="navigation2 d-flex justify-content-between py-3">
-                <span class="span px-3">MEN</span>
-                <span class="span px-3">WOMEN</span>
-                <span class="span px-3">KIDS</span>
-                <span class="span px-3">BEAUTY PRODUCTS</span>
+                <span class="span mx-3 ">MEN</span>
+                <span class="span mx-3">WOMEN</span>
+                <span class="span mx-3">KIDS</span>
+                <span class="span mx-3">BEAUTY PRODUCTS</span>
             </div>
         </div>
 
@@ -34,17 +35,20 @@
                 <i class="logo-text">ShopDrop</i>
             </div>
             <div class="navbars">
-                <span class="px-3">MEN</span>
-                <span class="px-3">WOMEN</span>
-                <span class="px-3">KIDS</span>
-                <span class="px-3">BEAUTY PRODUCTS</span>
+                <span class="span mx-3">MEN</span>
+                <span class="span mx-3">WOMEN</span>
+                <span class="span mx-3">KIDS</span>
+                <span class="span mx-3">BEAUTY PRODUCTS</span>
             </div>
-            <div class="icons d-flex justify-content-between me-4">
+            <div class="icons d-flex justify-content-between me-3">
                 <div class="account d-flex flex-column justify-content-center align-items-center">
 
-                    <button class="btn account-cart d-flex flex-column justify-content-center align-items-center" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"><div class="account-icon"><img src="images/user.png" alt="" class="w-100"></div>
-                        <div class="account-text text-center pt-1">Account</div></button>
+                    <button class="btn account-cart d-flex flex-column justify-content-center align-items-center"
+                        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1"
+                        aria-controls="offcanvasRight">
+                        <div class="account-icon"><img src="images/user.png" alt="" class="w-100"></div>
+                        <div class="account-text text-center pt-1">Account</div>
+                    </button>
 
                     <div class="offcanvas offcanvas-end mt-5" tabindex="-1" id="offcanvasRight1"
                         aria-labelledby="offcanvasRightLabel">
@@ -58,12 +62,12 @@
                             <h6>Web Developer</h6><br>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <!-- cart button with open close -->
 
-                <div class="cart">
+                <div class="cart d-flex flex-column justify-content-center align-items-center">
                     <button class="btn cart-btn d-flex flex-column justify-content-center align-items-center"
                         type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                         aria-controls="offcanvasRight">
@@ -75,7 +79,7 @@
                         aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
                             <h5 id="offcanvasRightLabel">CART</h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            <button type="button" class=" btn btn-close text-reset" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
@@ -90,42 +94,106 @@
         </div>
 
         <!-- search bar -->
-        <div class="searching d-flex justify-content-center align-items-center px-3 py-2">
-            <div class="group w-75 bg-white d-flex justify-content-between">
-                <input type="text" class="input-box ms-3 border-0" placeholder="Search product...">
-                <button class="btn btn-secondary btn-search px-4 border rounded-pill">
+        <div class="searching d-flex justify-content-center align-items-center">
+            <div class="group w-75 bg-white d-flex justify-content-between ms-3">
+                <input type="text" class="input-box ms-4 border-0" placeholder="Search product...">
+                <button class="btn btn-secondary btn-search px-4">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
-            <div class="login">
-                <button class="btn-secondary rounded-pill border-0 px-2 py-2 ms-2">Login</button>
+            <div class="login me-3">
+                <button class="btn-secondary login-btn"><b>Login</b></button>
             </div>
 
         </div>
 
         <!-- scrollable carosal -->
-        
+
         <div class="glider-contain py-5 px-2">
-            <div class="glider p-2">
-              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion6.jpg" alt=""></div>
-              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion1.jpg" alt=""></div>
-              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion2.jpg" alt=""></div>
-              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion3.jpg" alt=""></div>
-              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion4.jpg" alt=""></div>
-              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion5.jpg" alt=""></div>
-             
+            <div class="glider">
+                <a href=""><div class="px-3 p-lg-1"><img src="images/fashion festival/fashion6.jpg" alt=""></div></a>
+                <a href=""><div class="px-3 p-lg-1"><img src="images/fashion festival/fashion1.jpg" alt=""></div></a>
+                <a href=""><div class="px-3 p-lg-1"><img src="images/fashion festival/fashion2.jpg" alt=""></div></a>
+                <a href=""><div class="px-3 p-lg-1"><img src="images/fashion festival/fashion3.jpg" alt=""></div></a>
+                <a href=""><div class="px-3 p-lg-1"><img src="images/fashion festival/fashion4.jpg" alt=""></div></a>
+                <a href=""><div class="px-3 p-lg-1"><img src="images/fashion festival/fashion5.jpg" alt=""></div></a>
+
             </div>
             <div role="tablist" class="dots" id="dots"></div>
-          </div>
-
-          <!-- banner adverticement -->
-          <div class="advertisement">
-            
-          </div>
-
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+
+        <!-- banner adverticement -->
+        <div class="advertisement">
+            <img src="images/dice1.png" alt="" class="image-content1">
+            <div class="text-content"><b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda soluta iusto
+                quas laudantium esse! Facere architecto omnis nihil quasi itaque eligendi voluptate soluta accusantium.
+                Maiores?</b>
+            </div>
+            <img src="images/dice1.png" alt="" class="image-content2">
+        </div>
+
+        <!-- suggested for you -->
+        <div class="suggested">
+            <div class="con d-flex justify-content-between my-2 align-items-center">
+                <p class="text ms-3 mt-3"><b>Suggested For You</b></p>
+                <button class="btn viewall btn-secondary me-3 border-0 rounded-2"><b>View all </b><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="suggest">
+                <div class="glider-contain py-5 px-2">
+                    <div class="glider2">
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug1.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug2.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug3.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug4.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug5.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug6.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug7.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug8.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug9.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug10.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug11.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug12.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="">
+                            <div class="px-2"><img src="images/suggested/sug13.jpg" alt="" class="sug"></div>
+                        </a>
+                        <a href="#">
+                            <div class="px-3 p-lg-1"><img src="images/suggested/sug1.jpg" alt=""></div>
+                        </a>
+
+                    </div>
+                    <div role="tablist" class="dots" id="dots"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 </body>
