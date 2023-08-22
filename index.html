@@ -1,13 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopDrop</title>
+    <script src="https://kit.fontawesome.com/92d73c3f26.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    
+    <div class="container-fluid p-0 m-0">
+
+        <!-- nav bar for small devices -->
+
+        <div class="navsmall">
+            <div class="navigation2 d-flex justify-content-between py-3">
+                <span class="span px-3">MEN</span>
+                <span class="span px-3">WOMEN</span>
+                <span class="span px-3">KIDS</span>
+                <span class="span px-3">BEAUTY PRODUCTS</span>
+            </div>
+        </div>
+
+        <!-- navigation bar  -->
+
+        <div class="navigation d-flex justify-content-between align-items-center">
+            <div class="logo d-flex flex-column ms-3">
+                <img src="images/logo.png">
+                <i class="logo-text">ShopDrop</i>
+            </div>
+            <div class="navbars">
+                <span class="px-3">MEN</span>
+                <span class="px-3">WOMEN</span>
+                <span class="px-3">KIDS</span>
+                <span class="px-3">BEAUTY PRODUCTS</span>
+            </div>
+            <div class="icons d-flex justify-content-between me-4">
+                <div class="account d-flex flex-column justify-content-center align-items-center">
+
+                    <button class="btn account-cart d-flex flex-column justify-content-center align-items-center" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight"><div class="account-icon"><img src="images/user.png" alt="" class="w-100"></div>
+                        <div class="account-text text-center pt-1">Account</div></button>
+
+                    <div class="offcanvas offcanvas-end mt-5" tabindex="-1" id="offcanvasRight1"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel">My Account</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <h2><b>Dinesh Kumar</b></h2><br>
+                            <h6>Web Developer</h6><br>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- cart button with open close -->
+
+                <div class="cart">
+                    <button class="btn cart-btn d-flex flex-column justify-content-center align-items-center"
+                        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight">
+                        <div class="cart-icon"><img src="images/carts.png" alt="Cart" class="w-100"></div>
+                        <div class="cart-text text-center pt-1">Cart</div>
+                    </button>
+
+                    <div class="offcanvas offcanvas-end mt-5" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel">CART</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p class="text pt-1">tshirt -1000Rs</p><br>
+                            <p class="text pt-1">tshirt -1000Rs</p><br>
+                            <p class="text pt-1">tshirt -1000Rs</p><br>
+                            <p class="text pt-1">tshirt -1000Rs</p><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- search bar -->
+        <div class="searching d-flex justify-content-center align-items-center px-3 py-2">
+            <div class="group w-75 bg-white d-flex justify-content-between">
+                <input type="text" class="input-box ms-3 border-0" placeholder="Search product...">
+                <button class="btn btn-secondary btn-search px-4 border rounded-pill">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="login">
+                <button class="btn-secondary rounded-pill border-0 px-2 py-2 ms-2">Login</button>
+            </div>
+
+        </div>
+
+        <!-- scrollable carosal -->
+        
+        <div class="glider-contain py-5 px-2">
+            <div class="glider p-2">
+              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion6.jpg" alt=""></div>
+              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion1.jpg" alt=""></div>
+              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion2.jpg" alt=""></div>
+              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion3.jpg" alt=""></div>
+              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion4.jpg" alt=""></div>
+              <div class="px-3 p-lg-1"><img src="images/fashion festival/fashion5.jpg" alt=""></div>
+             
+            </div>
+            <div role="tablist" class="dots" id="dots"></div>
+          </div>
+
+          <!-- banner adverticement -->
+          <div class="advertisement">
+            
+          </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

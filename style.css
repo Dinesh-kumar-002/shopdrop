@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Julee&family=Julius+Sans+One&display=swap');
+
+/* font-family: 'Handlee', cursive;
+font-family: 'Julee', cursive;
+font-family: 'Julius Sans One', sans-serif; */
+:root{
+    --main:rgb(227, 232, 163);
+}
+.navigation{
+    background-color: var(--main);
+    color: black;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.cart-text,.account-text{
+    font-size: 13px;
+    font-weight: bolder;
+
+}
+.logo{
+    width: 120px;
+}
+.span{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.logo-text{
+    font-family: 'Julee', cursive;
+    color: rgb(255, 28, 168);
+    text-shadow: 1px 1px 2px black;
+    font-size: 22px;
+    transform: translateY(-15px);
+}
+.icons{
+    width: 130px;
+    height: 60px;
+}
+.account-icon{
+    width: 20px;
+    height: 20px;
+}
+.cart-icon{
+    width: 20px;
+    height: 20px;
+}   
+.cart-btn ,.account-cart, .btn-close{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.navsmall{
+    display: none;
+}
+.searching{
+    width: 100%;
+    background-color: var(--main);
+}
+.group{
+    border-radius: 20px;
+}
+.input-box{
+    padding: 8px;
+    width: 100%;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.glider-contain{
+    background-image: linear-gradient(rgb(227, 232, 163),rgb(198, 255, 165));
+}
+
+@media screen and (max-width:720px) {
+    .navbars{
+        display: none;
+    }
+    .navsmall{
+        display: block;
+    }
+    .logo{
+        width: 100px;
+    }
+   
+}
