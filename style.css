@@ -227,7 +227,7 @@ body{
     line-height: 50px;
     padding: 0 10px;
     height: 50px;
-    background-color: rgb(149, 255, 0);
+    background-color: rgb(150, 255, 4);
 }
 .click-fav{
     background-color: var(--main);
@@ -435,7 +435,7 @@ body{
     height: 95%;
 }
 .beauty-products{
-    background-color: var(--main);
+    background-color: rgb(162, 255, 162);
 }
 .apps-icon img{
     width: 150px;
@@ -471,7 +471,7 @@ body{
 .main-box{
     padding-top: 30px;
     /* background-color: var(--main); */
-    background-color: rgba(239, 239, 239, 0.413);
+    background-color: rgba(203, 203, 203, 0.263);
 }
 .footer{
     padding-top: 15px;
