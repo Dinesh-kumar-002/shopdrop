@@ -200,9 +200,9 @@ body{
     opacity: 0.4;
 }
 .fa-angles-right{
-    transition: transform 500ms linear;
+    transition: transform 300ms linear;
     opacity: 0;
-    transform: translateX(-10px);
+    transform: translateX(-5px);
 }
 .viewall:hover .fa-angles-right{
     opacity: 1;
@@ -211,6 +211,9 @@ body{
 .viewall:hover{
     color: black !important;
     background-color: yellow;
+}
+.viewall:hover a{
+    color: black !important;
 }
 .sug{
     height: 350px ;
