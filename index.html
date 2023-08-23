@@ -146,7 +146,7 @@
         <!-- suggested for you -->
         <div class="suggested">
             <div class="con d-flex justify-content-between align-items-center">
-                <p class="text ms-3 mt-3"><b>Suggested For You</b></p>
+                <h4 class="text ms-3 mt-3"><b>Suggested For You</b></h4>
                 <button class="btn viewall btn-secondary me-3 border-0 rounded-2"><a href="" class="text-decoration-none text-white"><b>View all </b></a><i class="fa-solid fa-arrow-right"></i></button>
             </div>
             <div class="suggest">
@@ -199,9 +199,9 @@
         </div>
 
             <!-- click your favorite -->
-            <!-- <div class="click-fav">
+            <div class="click-fav">
                 <div class="con d-flex justify-content-between align-items-center">
-                    <p class="text ms-3 mt-3"><b>Click Your Favorite</b></p>
+                    <h4 class="text ms-3 mt-3"><b>Click Your Favorite</b></h4>
                     <button class="btn viewall btn-secondary me-3 border-0 rounded-2"><a href="" class="text-decoration-none text-white"><b>View all </b></a><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div class="row p-0 mt-4 m-0">
@@ -239,12 +239,13 @@
                     </div>
                     
                 </div>
-            </div> -->
+            </div>
+
             <!-- click your favorite -->
 
-            <!--<div class="trending">
+            <div class="trending">
                  <div class="con d-flex  align-items-center">
-                    <p class="text ms-3 mt-3"><b>Top Trending Women's Fashion</b></p>
+                    <h4 class="text ms-3 mt-3"><b>Top Trending Women's Fashion</b></h4>
                 </div>
                 <div class="row p-0 mt-4 m-0">
                     <div class="col-6 col-lg-3">                 
@@ -431,7 +432,7 @@
                     
                 </div>
                 
-            </div> -->
+            </div>
 
              <!-- banner adverticement -->
         <div class="advertisement2 pt-5 ">
@@ -456,7 +457,7 @@
         </div>
 
          <!-- More to explore -->
-         <!-- <div class="trending">
+         <div class="trending">
             <div class="con d-flex justify-content-between align-items-center">
                 <p class="text ms-3 mt-3"><b>More To explore</b></p>
                 <button class="btn viewall btn-secondary me-3 border-0 rounded-2"><a href="" class="text-decoration-none text-white"><b>View all </b></a><i class="fa-solid fa-arrow-right"></i></button>
@@ -643,15 +644,15 @@
                         </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <!-- today trending -->
 
-    <!-- <div class="today p-2 d-flex flex-column justify-content-center align-items-center">
+    <div class="today p-2 d-flex flex-column justify-content-center align-items-center">
         <div class="todayTrend py-2"><h5><b>Today Trending</b></h5></div>
         <div class="trendingBox">
-            <div class="row my-2">
-                <div class="col-6 col-lg-3 py-1">
+            <div class="row my-2 showing">
+                <div class="col-6 col-lg-3 py-1 ">
                     <div class="each each1" data-aos="fade-up" data-aos-duration="1500">
                         <img src="images/today/men1.jpg" alt="">
                     </div>
@@ -673,12 +674,12 @@
                 </div>
             </div>
         </div>
-        <button class="mt-4 btn-warning border-0 rounded-3 px-2 py-1 showmore"><b>Show more</b></button>
-    </div> -->
+        <button class="mt-4 btn-warning border-0 rounded-3 px-2 py-1 showmore" onclick="showmore()"><b>Show more</b></button>
+    </div>
 
     <!-- beauty products -->
 
-    <!-- <div class="beauty-products p-3">
+    <div class="beauty-products p-3">
         <div class="row">
             <div class="col-4 col-md-3 col-lg-2 ">
                 <a href=""><img src="images/cosmetics/cos1.jpg" alt="" class="img"></a>
@@ -717,15 +718,15 @@
                 <a href=""><img src="images/cosmetics/cos12.jpg" alt="" class="img"></a>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- footer and address  -->
     <div class="main-box">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 d-flex bg-secondary">
+            <div class="col-12 col-md-6 col-lg-4 d-flex order-lg-1 order-1 justify-content-center mt-4">
                 <div class="first-col">
                     <ul>
-                        <h3>Home</h3>
+                        <h4><b>Home</b></h4>
                         <li>Mens</li>
                         <li>kids</li>
                         <li>Beauty Products</li>
@@ -734,9 +735,9 @@
                         <li>Perfumes</li>
                     </ul>
                 </div>
-                <div class="second-col ms-2">
+                <div class="second-col">
                     <ul>
-                        <h3>Contact Us</h3>
+                        <h4><b>Contact Us</b></h4>
                         <li><span>New Fashion SHOPDROP<br>
                         123 GST road perungalathur,<br>
                         Guduvancheri,chennai 603202.
@@ -749,26 +750,43 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-12 col-md-12 col-lg-4">
-                <div class="shopdrop-logo">
-                    <img src="images/logo.png" alt="" class="w-100">
-                    <i class="logo-text">ShopDrop</i>
-
+            <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center flex-column py-4 order-3">
+                <div class="shopdrop-logo d-flex flex-column">
+                    <img src="images/logo.png" alt="" class="">
+                    <i class="shop">ShopDrop</i>
                 </div>
-                <h3><b>Now available on</b></h3>
-                <div class="apps-icon d-flex">
-
+                <h4 class="mt-2"><b>Now available on</b></h4>
+                <div class="apps-icon d-flex justify-content-center">
+                    <img src="images/appstore.png" alt="">
+                    <img src="images/playstore.png" alt="">
                 </div>
-                <p class="text">Follow us on</p>
-                <div class="social-icons">
-                    <i class="fa-brands fa-square-facebook" style="color: #385a94;"></i>
-                    <i><img src="" alt=""></i>
+                <p class="text-center pt-3">Follow us on</p>
+                <div class="social-icons d-flex justify-content-center">
+                    <i><img src="images/facebook.png" alt=""></i>
+                    <i><img src="images/instagram.png" alt="" class="ms-1"></i>
+                    <i><img src="images/twitter.png" alt="" class="ms-1"></i>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4"></div>
+            <div class="col-12 col-md-6 col-lg-4 order-lg-3 order-2 d-flex  align-items-center flex-column mt-4">
+                <div class="whoweare">
+                    <h4 class="text-center"><b>Who we are</b></h4>
+                    <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quae saepe in natus laudantium cupiditate nobis enim repudiandae, libero laborum.</p>
+                </div>
+                <div class="wharwedo">
+                    <h4 class="text-center mt-3"><b>What we do</b></h4>
+                    <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quae saepe in natus laudantium cupiditate nobis enim repudiandae, libero laborum. Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href=""><p><b>&copy;2022 ShopDrop |&nbsp;</b></p></a>
+            <a href=""><p><b>&nbsp;Terms and Conditions |&nbsp;</b></p></a>
+            <a href=""><p><b>&nbsp;Privacy Policy |&nbsp;</b></p></a>
+            <a href=""><p><b>&nbsp;Community Policy |&nbsp;</b></p></a>
+            <a href=""><p><b>&nbsp;Community Overview</b></p></a>
         </div>
     </div>
-
+    
     </div>
     <script>
                 //aos adding
@@ -790,6 +808,15 @@
                 trend[i].setAttribute("data-aos-duration","1500");
             }
             for(let i=4;i<=7;i++){
+                trend[i].setAttribute("data-aos","fade-up-left");
+                trend[i].setAttribute("data-aos-duration","1500");
+            }
+            for(let i=8;i<=11;i++){
+                
+                trend[i].setAttribute("data-aos","fade-up-right");
+                trend[i].setAttribute("data-aos-duration","1500");
+            }
+            for(let i=12;i<=15;i++){
                 trend[i].setAttribute("data-aos","fade-up-left");
                 trend[i].setAttribute("data-aos-duration","1500");
             }

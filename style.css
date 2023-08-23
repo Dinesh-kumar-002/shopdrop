@@ -423,10 +423,11 @@ body{
 .today{
     background-color: var(--main);
 }
-.col-4:hover{
+.col-4 .img:hover{
     transform: scale(1.1);
 }
 .col-4 img{
+    transition: transform 200ms ease-in-out;
     width: 100%;
     border-radius: 30px;
     margin: 10px;
@@ -436,6 +437,63 @@ body{
 .beauty-products{
     background-color: var(--main);
 }
+.apps-icon img{
+    width: 150px;
+    height: 50px;
+}
+.shopdrop-logo{
+    width: 120px;
+    font-family: 'Julee', cursive;
+    color: rgb(255, 28, 168);
+    text-shadow: 1px 1px 2px black;
+    font-size: 22px;
+    transform: translateY(18px);
+}
+.shopdrop-logo .shop{
+    transform: translateY(-14px);
+    
+}
+.social-icons img{
+    width: 25px;
+}
+.first-col,.second-col{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+.first-col ul,.second-col ul{
+    list-style: none;
+    margin: 0;
+}
+.first-col ul li,.second-col ul li{
+    padding: 7px 0px;
+}
+.main-box{
+    padding-top: 30px;
+    /* background-color: var(--main); */
+    background-color: rgba(239, 239, 239, 0.413);
+}
+.footer{
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+   
+}
+.footer a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -444,6 +502,7 @@ body{
     .sug{
         height: 175px;
     }
+    
 }
 @media screen and (max-width:740px) {
     .navbars{
@@ -508,5 +567,7 @@ body{
     .text-content{
     color: white;
     }
-   
+   .footer{
+    padding-left: 20px;
+   }
 }

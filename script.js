@@ -77,7 +77,39 @@ new Glider(document.querySelector('.glider'), {
     preloader.style.opacity = '0';
     body.style.overflow = 'visible';
     preloader.style.transition = 'opacity 2s';
-})
+  })
+  function showmore(){
+    // debugger;
+    var arr=['images/today/men1.jpg','images/today/men2.jpg','images/today/men3.jpg','images/today/men4.jpg','images/today/men5.jpg','images/today/men6.jpg','images/today/men7.jpg','images/today/men8.jpg','images/today/men9.jpg'];
+  let showing=document.querySelector('.showing');
+  var showmore=document.querySelector('.showmore');
+  if(showmore.innerText=="Show more"){
+    showing.innerHTML="";
+  for(let i=0;i<arr.length;i++){
+      showing.innerHTML+=
+      `<div class="col-6 col-lg-3 py-1">
+          <div class="each each4">
+          <img src="${arr[i]}" alt="no image avail">
+      </div>
+  </div>`;
+}
+showmore.innerText="show less";
+}
+  else if(showmore.innerText=="show less"){
+  showing.innerHTML="";
+  for(let i=0;i<4;i++){
+      showing.innerHTML+=
+      `<div class="col-6 col-lg-3 py-1">
+          <div class="each each4">
+          <img src="${arr[i]}" alt="no image avail">
+      </div>
+  </div>`;
+}
+showmore.innerText="show more";
+}
+  
+}
+
 
 
 
