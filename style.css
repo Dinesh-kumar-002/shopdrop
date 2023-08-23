@@ -199,14 +199,18 @@ body{
     font-size: 20px;
     opacity: 0.4;
 }
-.fa-arrow-right{
+.fa-angles-right{
     transition: transform 500ms linear;
     opacity: 0;
     transform: translateX(-10px);
 }
-.viewall:hover .fa-arrow-right{
+.viewall:hover .fa-angles-right{
     opacity: 1;
     transform: translateX(0);
+}
+.viewall:hover{
+    color: black !important;
+    background-color: yellow;
 }
 .sug{
     height: 350px ;
@@ -485,7 +489,37 @@ body{
     text-decoration: none;
     color: black;
 }
-
+.product{
+    width: 25%;
+    height: 100px;
+}
+.product img{
+    width: 70px;
+    height: 100%;
+}
+.add{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+}
+.minus{
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+}
+.input{
+    width: 40px;
+    height: 40px;
+    border: 0;
+}
 
 
 

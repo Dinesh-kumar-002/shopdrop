@@ -85,12 +85,35 @@
                             <button type="button" class=" btn btn-close text-reset" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
                         </div>
-                        <div class="offcanvas-body realcart">
-                            <div class="products">
+                        <div class="offcanvas-body realcart position-relative">
+                            <div class="products d-flex justify-content-between">
                                 <div class="product">
-                                    <img src="" alt="">
+                                    <img src="images/suggested/sug1.jpg" alt="">
+                                </div>
+                                <div class="nameandquantity d-flex flex-column justify-content-around">
+                                    <h6 class="text product-name">Full sleeve shirt</h6>
+                                    <div class="quantity d-flex align-items-end" >
+                                        <button class="btn-secondary add" onclick="add()">+</button>
+                                        <input type="number" class="input ps-3" value="1">
+                                        <button class="btn-secondary minus" onclick="minus()">-</button>
+                                   </div>
+                                </div>
+                                <div class="individual-price d-flex justify-content-center align-items-center">
+                                    100
                                 </div>
                             </div>
+
+                            <div class="total d-flex justify-content-between position-absolute bottom-0">
+                                <div class="tot d-flex justify-content-between">
+                                    <p class="total-text">Total</p>
+                                    <p class="total-value">100</p>
+                                </div>
+                            </div>
+
+
+
+
+                            
                         </div>
                     </div>
                 </div>
@@ -148,7 +171,7 @@
         <div class="suggested">
             <div class="con d-flex justify-content-between align-items-center">
                 <h5 class="text ms-3 mt-3"><b>Suggested For You</b></h5>
-                <button class="btn viewall btn-secondary me-3 border-0 rounded-2"><a href="" class="text-decoration-none text-white"><b>View all </b></a><i class="fa-solid fa-arrow-right"></i></button>
+                <button class="btn viewall btn-secondary me-3 border-0 rounded-2"><a href="" class="text-decoration-none text-white"><b>View all </b></a><i class="fa-solid fa-angles-right"></i></button>
             </div>
             <div class="suggest">
                 <div class="glider py-5 px-2">
@@ -203,7 +226,7 @@
             <div class="click-fav">
                 <div class="con d-flex justify-content-between align-items-center">
                     <h5 class="text ms-3 mt-3"><b>Click Your Favorite</b></h5>
-                    <button class="btn viewall btn-secondary me-3 border-0 rounded-2"><a href="" class="text-decoration-none text-white"><b>View all </b></a><i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn viewall btn-secondary me-3 border-0 rounded-2"><a href="" class="text-decoration-none text-white"><b>View all </b></a><i class="fa-solid fa-angles-right"></i></i></button>
                 </div>
                 <div class="row p-0 mt-4 m-0">
                     <div class="col-6 col-lg-3">
@@ -461,7 +484,7 @@
          <div class="trending">
             <div class="con d-flex justify-content-between align-items-center">
                 <h5 class="text ms-3 mt-3"><b>More To explore</b></h5>
-                <button class="btn viewall btn-secondary me-3 border-0 rounded-2"><a href="" class="text-decoration-none text-white"><b>View all </b></a><i class="fa-solid fa-arrow-right"></i></button>
+                <button class="btn viewall btn-secondary me-3 border-0 rounded-2"><a href="" class="text-decoration-none text-white"><b>View all </b></a><i class="fa-solid fa-angles-right"></i></button>
             </div>
             <div class="row p-0 mt-4 m-0">
                 <div class="col-6 col-lg-3">                 
