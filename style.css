@@ -523,7 +523,25 @@ body{
     height: 40px;
     border: 0;
 }
-
+.beau a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trending .row{
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    background-attachment: fixed;
+    background-position: -90px -90px;
+    background-image: url('images/dice1.png');
+}
+/* .trending .row:nth-child(3){
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    background-attachment: fixed;
+    background-position: -90px -90px;
+    background-image: url('images/dice1.png');
+} */
 
 
 
