@@ -37,9 +37,9 @@ new Glider(document.querySelector(".glider"), {
     },
   ],
 });
-// document.onselectstart = (event) => {
-//   event.preventDefault();
-// }
+document.onselectstart = (event) => {
+  event.preventDefault();
+}
 new Glider(document.querySelector(".glider2"), {
   // Mobile-first defaults
   slidesToShow: 5,
@@ -107,23 +107,27 @@ function showmore() {
       </div>
       </div>`;
     }
-    showmore.innerText = "Show less";
-  } else if (showmore.innerText == "Show less") {
-    console.log(showing);
-    showing.innerHTML = "";
-    for (let i = 0; i < 4; i++) {
-      showing.innerHTML += `<div class="col-6 col-lg-3 py-1">
-          <div class="each each4">
-          <img src="${arr[i]}" alt="no image avail">
-      </div>
-  </div>`;
-    }
-    showmore.innerText = "Show more";
-  }
+    showmore.remove()
+    // showmore.innerText = "Show less";
+  } 
+  // else if (showmore.innerText == "Show less") {
+  //   console.log(showing);
+  //   showing.innerHTML = "";
+  //   for (let i = 0; i < 4; i++) {
+  //     showing.innerHTML += `<div class="col-6 col-lg-3 py-1">
+  //         <div class="each each4">
+  //         <img src="${arr[i]}" alt="no image avail">
+  //     </div>
+  // </div>`;
+  //   }
+  //   showmore.innerText = "Show more";
+  // }
 }
 
 // addtocart
+var realcart = document.querySelector(".realcart");
 var p_array = [];
+function empty(){}
 function addtocart(btn) {
   var parent = btn.closest(".trend");
   var product_image = parent.querySelector("img").src;
@@ -134,7 +138,6 @@ function addtocart(btn) {
   );
   addtocartpage(product_image, product_name, product_price, id_value);
 }
-var realcart = document.querySelector(".realcart");
 function addtocartpage(p_image, p_name, p_price, p_id) {
   if (p_array.includes(p_id)) {
     return;
@@ -147,7 +150,7 @@ function addtocartpage(p_image, p_name, p_price, p_id) {
                                 </div>
                                 <div class="nameandquantity d-flex flex-column justify-content-around">
                                     <h6 class="text product-name">${p_name}</h6>
-                                    <h6 class="text product-id" style="display:none;">${p_id}</h6>
+                                    <p class="text product-id" style="display:none;">${p_id}</p>
                                     <h6 class="text price-id" style="display:none;">${p_price}</h6>
                                     <div class="quantity d-flex align-items-end" >
                                     <button class="btn-secondary minus" onclick="minus(this)">-</button>
@@ -170,28 +173,44 @@ function totals() {
   totaling.forEach((value) => {
     total+=parseInt(value.textContent);
   })
-  console.log(total);
 displaying_total.textContent=total;
   // displaying_total.textContent = price;
 }
 
 
+
 function minus(btn) {
   if (btn.nextElementSibling.value <= 1) {
-    var closest_remove=btn.closest('.product-id');
-    closest_remove()
-    console.log(remove);
-    p_array.filter((value) => {
-      value!=remove;
-    })
+    btn.value=0
+    var summa=btn.closest('.nameandquantity');
+    var summa2=summa.querySelector('.product-id').innerHTML;
+    console.log(summa2);
+    p_array.forEach((element, index) => {
+  if (element == summa2) {
+    p_array.splice(index, 1);
+  }
+});
+    // p_array=p_array.filter(value => { 
+    //   value!=summa2;
+    // })
+//     const div = btn.closest(".products");
+//     div.addEventListener("remove", () => {
+//   div.classList.add("transition");
+//   div.style.transition = "all 0.5s ease-in-out";
+//   setTimeout(() => {
+//     div.remove();
+//   }, 500);
+// });
+    // console.log(p_array);
     btn.closest(".products").remove();
+    subtotal(btn, minusbtn);
+  } 
+  else {
     console.log(p_array);
-  } else {
     var minusbtn = btn.nextElementSibling.value--;
     minusbtn--;
-    subtotal(btn, minusbtn);
-    console.log(p_array);
   }
+  subtotal(btn, minusbtn);
 }
 function add(btn) {
   var addbtn = btn.previousElementSibling.value++;

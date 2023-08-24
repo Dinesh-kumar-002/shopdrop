@@ -24,10 +24,11 @@ body{
     box-shadow: 0 3px 10px rgb(85, 85, 85);
 }
 .navigation2{
-    
-    background-color: darkseagreen;
-    color: rgb(0, 0, 0);
-    text-shadow: 0 0 2px rgb(255, 255, 255);
+    background-color: rgb(169, 216, 169);
+}
+.navigation2 a{
+    color: rgb(20, 0, 134);
+    text-decoration: none;
 }
 .cart-text, .account-text{
     font-size: 12px;
@@ -84,7 +85,8 @@ body{
     box-shadow:0 0 5px black;
 }
 .btn-search{
-    
+    background-color: var(--main);
+    padding: 0 35px;
     height: 100%;
     border-radius: 30px;
     border: none !important;
@@ -94,8 +96,9 @@ body{
 .login-btn{
     border: none !important;
     outline: none !important;
-    /* box-shadow: none !important; */
+    background-color: var(--main);
     border-radius: 30px;
+    color: black;
     width: max-content;
     padding: 0 20px;
     box-shadow:0 0 5px black;
@@ -122,10 +125,13 @@ body{
    
 }
 .span:hover{
-    color: blue;
+    color: rgb(0, 0, 123);
     bottom: 3px;
     text-shadow: none;
 
+}
+.navigation a{
+    text-decoration: none;
 }
 .span:hover.span::before{
     content: '';
@@ -433,13 +439,17 @@ body{
 .col-4 .img:hover{
     transform: scale(1.1);
 }
+.col-4 a{
+    height: 100%;
+    width: 100%;
+}
 .col-4 img{
     transition: transform 200ms ease-in-out;
     width: 100%;
     border-radius: 30px;
     margin: 10px;
     padding: 10px;
-    height: 95%;
+    height: 90%;
 }
 .beauty-products{
     background-color: rgb(162, 255, 162);
@@ -529,10 +539,10 @@ body{
     align-items: center;
 }
 .trending .row{
-    background-repeat: no-repeat;
-    background-size: 500px 500px;
+    /* background-repeat: no-repeat; */
+    background-size: 1000px 1000px;
     background-attachment: fixed;
-    background-position: -90px -90px;
+    background-position: center;
     background-image: url('images/dice1.png');
 }
 /* .trending .row:nth-child(3){
@@ -553,6 +563,22 @@ body{
         content: '$ ';
         padding-right: 3px;
 }
+.ifr{
+    width: 100%;
+    height: 100%;
+}
+.empty{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.fa-solid{
+    color: rgb(84, 84, 84) !important;
+}
+.fa-regular{
+    color: rgb(168, 168, 168) !important;
+}
+
 
 
 
