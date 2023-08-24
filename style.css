@@ -271,7 +271,7 @@ body{
 body{
     overflow: hidden;
 }
-.preloader{
+/* .preloader{
     z-index: 100;
     position: absolute;
     top: 0;
@@ -354,7 +354,7 @@ body{
     100% {
       transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
     }
-  }
+  } */
 .glider-dot{
     width: 25px;
     height: 10px;

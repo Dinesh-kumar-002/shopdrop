@@ -73,14 +73,14 @@ new Glider(document.querySelector(".glider2"), {
 
 // preloader
 
-window.addEventListener("load", () => {
-  let preloader = document.querySelector(".preloader");
-  let body = document.querySelector("body");
-  preloader.style.zIndex = "0";
-  preloader.style.opacity = "0";
-  body.style.overflow = "visible";
-  preloader.style.transition = "opacity 2s";
-});
+// window.addEventListener("load", () => {
+//   let preloader = document.querySelector(".preloader");
+//   let body = document.querySelector("body");
+//   preloader.style.zIndex = "0";
+//   preloader.style.opacity = "0";
+//   body.style.overflow = "visible";
+//   preloader.style.transition = "opacity 2s";
+// });
 function showmore() {
   var showing = document.querySelector(".showing");
   var showmore = document.querySelector(".showmore");
