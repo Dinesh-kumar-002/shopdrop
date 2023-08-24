@@ -266,7 +266,7 @@ body{
     overflow: hidden;
 }
 .preloader{
-    z-index: 40;
+    z-index: 100;
     position: absolute;
     top: 0;
     left: 0;
@@ -409,7 +409,7 @@ body{
 .advertisement2{
     background-color: var(--main);
 }
-.container-fluid{
+.row{
     overflow: hidden;
 }
 .each{
@@ -543,6 +543,16 @@ body{
     background-image: url('images/dice1.png');
 } */
 
+.total-value::before{
+        content: '$ ';
+}
+.total-value::after{
+        content: ' /-';
+}
+.individual-price::before{
+        content: '$ ';
+        padding-right: 3px;
+}
 
 
 

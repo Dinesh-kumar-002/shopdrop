@@ -94,8 +94,9 @@
                             <hr>
                             <div class="tot d-flex justify-content-between">
                                 <p class="total-text ms-5">Total</p>
-                                <p class="total-value me-5">100</p>
+                                <p class="total-value me-5"><b>0</b></p>
                             </div>
+                            <button class="btn-secondary border-0 rounded-2 w-100 py-2 mx-3">BUY</button>
                         </div>
                     </div>
                 </div>
@@ -673,24 +674,24 @@
     <div class="today p-2 d-flex flex-column justify-content-center align-items-center">
         <div class="todayTrend py-2"><h5><b>Today Trending</b></h5></div>
         <div class="trendingBox">
-            <div class="row my-2 showing">
+            <div class="row my-2 showing m-0 p-o">
                 <div class="col-6 col-lg-3 py-1 ">
-                    <div class="each each1" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="each each1" data-aos="fade-up" data-aos-duration="500">
                         <img src="images/today/men1.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-6 col-lg-3 py-1">
-                    <div class="each each2" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="each each2" data-aos="fade-up" data-aos-duration="500">
                         <img src="images/today/men2.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-6 col-lg-3 py-1">
-                    <div class="each each3" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="each each3" data-aos="fade-up" data-aos-duration="500">
                         <img src="images/today/men3.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-6 col-lg-3 py-1">
-                    <div class="each each4" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="each each4" data-aos="fade-up" data-aos-duration="500">
                         <img src="images/today/men4.jpg" alt="">
                     </div>
                 </div>
@@ -703,7 +704,7 @@
 
     <div class="beauty-products p-3">
         <h5 class="text-center"><b>Beauty products</b></h5>
-        <div class="row">
+        <div class="row m-0 p-0">
             <div class="beau col-4 col-md-3 col-lg-2">
                 <a href=""><img src="images/cosmetics/cos1.jpg" alt="" class="img"></a>
             </div>
@@ -745,7 +746,7 @@
 
     <!-- footer and address  -->
     <div class="main-box">
-        <div class="row">
+        <div class="row m-0 p-0">
             <div class="col-12 col-md-6 col-lg-4 d-flex order-lg-1 order-1 justify-content-center mt-4">
                 <div class="first-col">
                     <ul>
@@ -817,11 +818,11 @@
             var second_carosal=document.querySelectorAll('.second-carosal')
             first_carosal.forEach((value) => {
                 value.setAttribute("data-aos","fade-left");
-                value.setAttribute("data-aos-duration","2000");
+                value.setAttribute("data-aos-duration","500");
             })
             second_carosal.forEach((value) => {
                 value.setAttribute("data-aos","zoom-in-left");
-                value.setAttribute("data-aos-duration","2000");
+                value.setAttribute("data-aos-duration","500");
             })
 
             var trend=document.querySelectorAll(".trend");
@@ -829,29 +830,29 @@
             var cosmetics=document.querySelectorAll('.col-4');
             image.forEach((value) => {
                 value.setAttribute("data-aos","zoom-in-right");
-                value.setAttribute("data-aos-duration","2000");
+                value.setAttribute("data-aos-duration","500");
             })
             cosmetics.forEach((value) => {
                 value.setAttribute("data-aos","zoom-in-up");
-                value.setAttribute("data-aos-duration","2000");
+                value.setAttribute("data-aos-duration","500");
             })
             for(let i=0;i<=3;i++){
                 
                 trend[i].setAttribute("data-aos","fade-up-right");
-                trend[i].setAttribute("data-aos-duration","1500");
+                trend[i].setAttribute("data-aos-duration","500");
             }
             for(let i=4;i<=7;i++){
                 trend[i].setAttribute("data-aos","fade-up-left");
-                trend[i].setAttribute("data-aos-duration","1500");
+                trend[i].setAttribute("data-aos-duration","500");
             }
             for(let i=8;i<=11;i++){
                 
                 trend[i].setAttribute("data-aos","fade-up-right");
-                trend[i].setAttribute("data-aos-duration","1500");
+                trend[i].setAttribute("data-aos-duration","500");
             }
             for(let i=12;i<=15;i++){
                 trend[i].setAttribute("data-aos","fade-up-left");
-                trend[i].setAttribute("data-aos-duration","1500");
+                trend[i].setAttribute("data-aos-duration","500");
             }
         AOS.init();
       </script>
