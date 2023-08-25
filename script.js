@@ -127,7 +127,6 @@ function showmore() {
 // addtocart
 var realcart = document.querySelector(".realcart");
 var p_array = [];
-function empty() {}
 function addtocart(btn) {
   var parent = btn.closest(".trend");
   var product_image = parent.querySelector("img").src;
@@ -138,8 +137,14 @@ function addtocart(btn) {
   );
   addtocartpage(product_image, product_name, product_price, id_value);
 }
+var item_count=document.querySelector('.items-count');
 function addtocartpage(p_image, p_name, p_price, p_id) {
   if (p_array.includes(p_id)) {
+    var alerting_already = document.querySelector(".alerting-already");
+    alerting_already.style.display = "block";
+    setTimeout(() => {
+      alerting_already.style.display = "none";
+    }, 1000);
     return;
   } else {
     var alert = document.querySelector(".alerting-add");
@@ -148,6 +153,7 @@ function addtocartpage(p_image, p_name, p_price, p_id) {
       alert.style.display = "none";
     }, 1000);
     p_array.push(p_id);
+    item_count.innerHTML=p_array.length;
     realcart.innerHTML += `
     <div class="products d-flex mt-2">
         <div class="product">

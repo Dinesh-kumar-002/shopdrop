@@ -284,6 +284,15 @@ body{
     transform: translateX(-50%);
     z-index: 100;
 }
+.alerting-already{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
 
 
 /* preloader */
@@ -612,6 +621,21 @@ body{
 100%{
     transform: translate(0px);
    }
+}
+.items-count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 9px;
+    top: -15px;
+    left: 13px;
+    font-size: 13px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+.total{
+    background-color: var(--main);
 }
 
 
