@@ -39,7 +39,7 @@ new Glider(document.querySelector(".glider"), {
 });
 document.onselectstart = (event) => {
   event.preventDefault();
-}
+};
 new Glider(document.querySelector(".glider2"), {
   // Mobile-first defaults
   slidesToShow: 5,
@@ -107,9 +107,9 @@ function showmore() {
       </div>
       </div>`;
     }
-    showmore.remove()
+    showmore.remove();
     // showmore.innerText = "Show less";
-  } 
+  }
   // else if (showmore.innerText == "Show less") {
   //   console.log(showing);
   //   showing.innerHTML = "";
@@ -127,7 +127,7 @@ function showmore() {
 // addtocart
 var realcart = document.querySelector(".realcart");
 var p_array = [];
-function empty(){}
+function empty() {}
 function addtocart(btn) {
   var parent = btn.closest(".trend");
   var product_image = parent.querySelector("img").src;
@@ -142,70 +142,77 @@ function addtocartpage(p_image, p_name, p_price, p_id) {
   if (p_array.includes(p_id)) {
     return;
   } else {
+    var alert = document.querySelector(".alerting-add");
+    alert.style.display = "block";
+    setTimeout(() => {
+      alert.style.display = "none";
+    }, 1000);
     p_array.push(p_id);
     realcart.innerHTML += `
-  <div class="products d-flex mt-2">
-                                <div class="product">
-                                    <img src="${p_image}" alt="">
-                                </div>
-                                <div class="nameandquantity d-flex flex-column justify-content-around">
-                                    <h6 class="text product-name">${p_name}</h6>
-                                    <p class="text product-id" style="display:none;">${p_id}</p>
-                                    <h6 class="text price-id" style="display:none;">${p_price}</h6>
-                                    <div class="quantity d-flex align-items-end" >
-                                    <button class="btn-secondary minus" onclick="minus(this)">-</button>
-                                    <input type="number" class="input ps-2" value="1" disabled>
-                                    <button class="btn-secondary add" onclick="add(this)">+</button>
-                                   </div>
-                                </div>
-                                <div class="individual-price d-flex justify-content-end align-items-end ms-5 ps-4">
-                                    ${p_price}
-                                </div>
-                            </div>
+    <div class="products d-flex mt-2">
+        <div class="product">
+              <img src="${p_image}" alt="">
+        </div>
+            <div class="nameandquantity d-flex flex-column justify-content-around ms-2">
+                <h6 class="text product-name">${p_name}</h6>
+                <p class="text product-id" style="display:none;">${p_id}</p>
+                <h6 class="text price-id" style="display:none;">${p_price}</h6>
+                    <div class="quantity d-flex align-items-end" >
+                          <button class="btn-secondary minus" onclick="minus(this)">-</button>
+                          <input type="number" class="input ps-2" value="1" disabled>
+                          <button class="btn-secondary add" onclick="add(this)">+</button>
+                    </div>
+            </div>
+            <div class="individual-price d-flex justify-content-end align-items-end ms-5 ps-4">
+                        ${p_price}
+            </div>
+      </div>
   `;
     totals();
   }
 }
 function totals() {
-  var total=0;
+  var total = 0;
   var totaling = document.querySelectorAll(".individual-price");
   var displaying_total = document.querySelector(".total-value");
   totaling.forEach((value) => {
-    total+=parseInt(value.textContent);
-  })
-displaying_total.textContent=total;
+    total += parseInt(value.textContent);
+  });
+  displaying_total.textContent = total;
   // displaying_total.textContent = price;
 }
 
-
-
 function minus(btn) {
   if (btn.nextElementSibling.value <= 1) {
-    btn.value=0
-    var summa=btn.closest('.nameandquantity');
-    var summa2=summa.querySelector('.product-id').innerHTML;
+    btn.value = 0;
+    var summa = btn.closest(".nameandquantity");
+    var summa2 = summa.querySelector(".product-id").innerHTML;
     console.log(summa2);
     p_array.forEach((element, index) => {
-  if (element == summa2) {
-    p_array.splice(index, 1);
-  }
-});
-    // p_array=p_array.filter(value => { 
+      if (element == summa2) {
+        p_array.splice(index, 1);
+      }
+    });
+    // p_array=p_array.filter(value => {
     //   value!=summa2;
     // })
-//     const div = btn.closest(".products");
-//     div.addEventListener("remove", () => {
-//   div.classList.add("transition");
-//   div.style.transition = "all 0.5s ease-in-out";
-//   setTimeout(() => {
-//     div.remove();
-//   }, 500);
-// });
+    //     const div = btn.closest(".products");
+    //     div.addEventListener("remove", () => {
+    //   div.classList.add("transition");
+    //   div.style.transition = "all 0.5s ease-in-out";
+    //   setTimeout(() => {
+    //     div.remove();
+    //   }, 500);
+    // });
     // console.log(p_array);
+    var alert_delete = document.querySelector(".alerting-delete");
+    alert_delete.style.display = "block";
+    setTimeout(() => {
+      alert_delete.style.display = "none";
+    }, 1000);
     btn.closest(".products").remove();
     subtotal(btn, minusbtn);
-  } 
-  else {
+  } else {
     console.log(p_array);
     var minusbtn = btn.nextElementSibling.value--;
     minusbtn--;
@@ -227,5 +234,5 @@ function subtotal(btn, val) {
   var subtotal = subtotal_parent.querySelector(".individual-price");
   subtotal.innerText = subtotal_id * val;
   console.log(subtotal, subtotal_id, btn);
-  totals()
+  totals();
 }

@@ -264,7 +264,26 @@ body{
     /* border-bottom-right-radius: 80px; */
 
     border-top-left-radius: 80px;
-    border-bottom-right-radius: 80px;}
+    border-bottom-right-radius: 80px;
+}
+.alerting-add{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+.alerting-delete{
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
 
 
 /* preloader */
@@ -577,6 +596,22 @@ body{
 }
 .fa-regular{
     color: rgb(168, 168, 168) !important;
+}
+.cart-image{
+    animation: shake 1s ease-in-out infinite;
+    width: 30px;
+    height: 30px;
+}
+@keyframes shake {
+   0%{
+    transform: translate(0px);
+} 
+50%{
+    transform: translateY(3px);
+}
+100%{
+    transform: translate(0px);
+   }
 }
 
 
