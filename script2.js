@@ -15,7 +15,7 @@ function submit(){
         <h5 class="detail3">${localStorage.getItem("useremail")}</h5>
         <button class="btn-warning border-0 rounded-pill px-3 py-2 logout-btn" onclick="logout()"><b>LOGOUT</b></button>
         </div>`;
-    },1000)
+    },500)
 }
 else{
     display_none.innerHTML=
@@ -52,6 +52,7 @@ function logout(){
     data_array.forEach((item)=>{
         localStorage.removeItem(item);
     })
+    window.location.reload();
     submit();
 }
 
