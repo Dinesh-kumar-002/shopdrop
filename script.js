@@ -3,7 +3,7 @@ var typing = new Typed(".text-content", {
     "",
     " \"At Shop Drop, we're dedicated to bringing you a seamless and exciting shopping experience. With a carefully curated selection of products that cater to your diverse needs, we're here to redefine the way you shop.\"",
   ],
-  typeSpeed: 60,
+  typeSpeed:20,
   // backSpeed: 10,
   // loop: true,
   showCursor: false,
@@ -191,13 +191,14 @@ function totals() {
 function minus(btn) {
   if (btn.nextElementSibling.value <= 1) {
     btn.value = 0;
+
     var summa = btn.closest(".nameandquantity");
     var summa2 = summa.querySelector(".product-id").innerHTML;
-    console.log(summa2);
     p_array.forEach((element, index) => {
       if (element == summa2) {
         p_array.splice(index, 1);
       }
+      item_count.innerHTML=p_array.length;
     });
     // p_array=p_array.filter(value => {
     //   value!=summa2;
@@ -242,3 +243,11 @@ function subtotal(btn, val) {
   console.log(subtotal, subtotal_id, btn);
   totals();
 }
+
+var level=document.querySelector('.level');
+window.addEventListener('scroll', ()=>{
+    let length=Math.floor(window.scrollY);
+    let scrollablHeight=Math.floor(document.documentElement.scrollHeight-window.innerHeight);
+    var totalHeightInPercentage=(length/scrollablHeight)*100;
+    level.style.width=`${totalHeightInPercentage}%`;
+})

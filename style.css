@@ -59,7 +59,7 @@ body{
     width: 20px;
     height: 20px;
 }   
-.cart-btn,.account-cart,.btn-close,.viewall,.login-btn,.showmore{
+.cart-btn,.account-cart,.btn-close,.viewall,.login-btn,.showmore,.add,.minus{
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
@@ -271,16 +271,16 @@ body{
     position: fixed;
     bottom: 20px;
     left: 50%;
-    width: 100%;
+    width: 80%;
     transform: translateX(-50%);
     z-index: 20;
 }
 .alerting-delete{
     display: none;
-    position: fixed;
-    bottom: 50px;
+    position: absolute;
+    bottom: 0px;
     left: 50%;
-    width: 100%;
+    width: 80%;
     transform: translateX(-50%);
     z-index: 100;
 }
@@ -289,7 +289,7 @@ body{
     position: fixed;
     bottom: 20px;
     left: 50%;
-    width: 100%;
+    width: 80%;
     transform: translateX(-50%);
     z-index: 20;
 }
@@ -626,7 +626,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 9px;
+    padding: 5px 10px;
     top: -15px;
     left: 13px;
     font-size: 13px;
@@ -638,7 +638,16 @@ body{
     background-color: var(--main);
 }
 
-
+.scrolling{
+    position: absolute;
+    top: 0;
+    z-index: 50;
+}
+    .level{
+        width: 5%;
+        height: 10px;
+        background-color: #1895a5;
+    }
 
 
 
@@ -688,7 +697,8 @@ body{
         
     }
     .navigation{
-        position: sticky;
+        position: fixed;
+        width: 100%;
         top: 0;
         z-index: 30;
     }
