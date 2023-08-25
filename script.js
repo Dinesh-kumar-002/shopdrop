@@ -3,7 +3,7 @@ var typing = new Typed(".text-content", {
     "",
     " \"At Shop Drop, we're dedicated to bringing you a seamless and exciting shopping experience. With a carefully curated selection of products that cater to your diverse needs, we're here to redefine the way you shop.\"",
   ],
-  typeSpeed:20,
+  typeSpeed: 20,
   // backSpeed: 10,
   // loop: true,
   showCursor: false,
@@ -73,14 +73,14 @@ new Glider(document.querySelector(".glider2"), {
 
 // preloader
 
-// window.addEventListener("load", () => {
-//   let preloader = document.querySelector(".preloader");
-//   let body = document.querySelector("body");
-//   preloader.style.zIndex = "0";
-//   preloader.style.opacity = "0";
-//   body.style.overflow = "visible";
-//   preloader.style.transition = "opacity 2s";
-// });
+window.addEventListener("load", () => {
+  let preloader = document.querySelector(".preloader");
+  let body = document.querySelector("body");
+  preloader.style.zIndex = "0";
+  preloader.style.opacity = "0";
+  body.style.overflow = "visible";
+  preloader.style.transition = "opacity 2s";
+});
 function showmore() {
   var showing = document.querySelector(".showing");
   var showmore = document.querySelector(".showmore");
@@ -137,7 +137,7 @@ function addtocart(btn) {
   );
   addtocartpage(product_image, product_name, product_price, id_value);
 }
-var item_count=document.querySelector('.items-count');
+var item_count = document.querySelector(".items-count");
 function addtocartpage(p_image, p_name, p_price, p_id) {
   if (p_array.includes(p_id)) {
     var alerting_already = document.querySelector(".alerting-already");
@@ -153,7 +153,7 @@ function addtocartpage(p_image, p_name, p_price, p_id) {
       alert.style.display = "none";
     }, 1000);
     p_array.push(p_id);
-    item_count.innerHTML=p_array.length;
+    item_count.innerHTML = p_array.length;
     realcart.innerHTML += `
     <div class="products d-flex mt-2">
         <div class="product">
@@ -185,33 +185,28 @@ function totals() {
     total += parseInt(value.textContent);
   });
   displaying_total.textContent = total;
-  // displaying_total.textContent = price;
 }
-
+empty();
+function empty(){
+  if(p_array<=1){
+    realcart.innerHTML="Your cart is empty";
+  }
+  else{
+   return;
+  }
+}
 function minus(btn) {
   if (btn.nextElementSibling.value <= 1) {
     btn.value = 0;
-
     var summa = btn.closest(".nameandquantity");
     var summa2 = summa.querySelector(".product-id").innerHTML;
     p_array.forEach((element, index) => {
       if (element == summa2) {
         p_array.splice(index, 1);
       }
-      item_count.innerHTML=p_array.length;
+      item_count.innerHTML = p_array.length;
     });
-    // p_array=p_array.filter(value => {
-    //   value!=summa2;
-    // })
-    //     const div = btn.closest(".products");
-    //     div.addEventListener("remove", () => {
-    //   div.classList.add("transition");
-    //   div.style.transition = "all 0.5s ease-in-out";
-    //   setTimeout(() => {
-    //     div.remove();
-    //   }, 500);
-    // });
-    // console.log(p_array);
+    empty();
     var alert_delete = document.querySelector(".alerting-delete");
     alert_delete.style.display = "block";
     setTimeout(() => {
@@ -244,22 +239,22 @@ function subtotal(btn, val) {
   totals();
 }
 
-var level=document.querySelector('.level');
-window.addEventListener('scroll', ()=>{
-    let length=Math.floor(window.scrollY);
-    let scrollablHeight=Math.floor(document.documentElement.scrollHeight-window.innerHeight);
-    var totalHeightInPercentage=(length/scrollablHeight)*100;
-    level.style.width=`${totalHeightInPercentage}%`;
-})
+var level = document.querySelector(".level");
+window.addEventListener("scroll", () => {
+  let length = Math.floor(window.scrollY);
+  let scrollablHeight = Math.floor(
+    document.documentElement.scrollHeight - window.innerHeight
+  );
+  var totalHeightInPercentage = (length / scrollablHeight) * 100;
+  level.style.width = `${totalHeightInPercentage}%`;
+});
 
-function heart(heart_paren){
-    
-  if(heart_paren.style.color == "white"){
-    heart_paren.style.color ="red";
-    heart_paren.style.backgroundColor="rgba(255, 255, 255, 0.304)";
-  }
-  else{
+function heart(heart_paren) {
+  if (heart_paren.style.color == "white") {
+    heart_paren.style.color = "red";
+    heart_paren.style.backgroundColor = "rgba(255, 255, 255, 0.304)";
+  } else {
     heart_paren.style.color = "white";
-    heart_paren.style.backgroundColor="transparent";
+    heart_paren.style.backgroundColor = "transparent";
   }
 }

@@ -278,7 +278,7 @@ body{
 .alerting-delete{
     display: none;
     position: absolute;
-    bottom: 0px;
+    bottom: 110px;
     left: 50%;
     width: 80%;
     transform: translateX(-50%);
@@ -296,10 +296,10 @@ body{
 
 
 /* preloader */
-/* body{
+body{
     overflow: hidden;
-} */
-/* .preloader{
+} 
+ .preloader{
     z-index: 100;
     position: absolute;
     top: 0;
@@ -382,7 +382,7 @@ body{
     100% {
       transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
     }
-  } */
+  }
 .glider-dot{
     width: 25px;
     height: 10px;
@@ -395,31 +395,6 @@ body{
 .trending{
     background-color: var(--main);
 }
-/* .trending::before{
-    content: url('images/dice1.png');
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 300px;
-
-} */
-/* .back1,.back2{
-    z-index: 0;
-    position: absolute;
-    width: 450px;
-    height: 450px;
-} */
-/* .back1{
-    top: 0;
-    left: 0;
-    transform: translateX(-100px);
-}
-.back2{
-    bottom: 0;
-    right: 0;
-    transform: translateX(100px);
-} */
 .col-6 .trend{
     background-color: rgb(244, 244, 244);
     color: black;
@@ -516,7 +491,6 @@ body{
 }
 .main-box{
     padding-top: 30px;
-    /* background-color: var(--main); */
     background-color: rgba(203, 203, 203, 0.263);
 }
 .footer{
@@ -658,6 +632,23 @@ body{
         width: 5%;
         height: 10px;
         background-color: #1895a5;
+    }
+    .account-input{
+        width: 300px;
+        margin: 10px 0;
+    }
+    .account-input input,.account-input button{
+        outline: 0;
+        border: 0;
+    }
+    .user_email, .user_name,.user_password{
+        width: 100%;
+        margin: 10px 0;
+        padding: 9px ;
+    }
+    
+    .detail2,.detail3,.logout-btn{
+        margin-top: 10px;
     }
 
 
