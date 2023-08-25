@@ -251,3 +251,15 @@ window.addEventListener('scroll', ()=>{
     var totalHeightInPercentage=(length/scrollablHeight)*100;
     level.style.width=`${totalHeightInPercentage}%`;
 })
+
+function heart(heart_paren){
+    
+  if(heart_paren.style.color == "white"){
+    heart_paren.style.color ="red";
+    heart_paren.style.backgroundColor="rgba(255, 255, 255, 0.304)";
+  }
+  else{
+    heart_paren.style.color = "white";
+    heart_paren.style.backgroundColor="transparent";
+  }
+}

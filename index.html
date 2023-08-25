@@ -304,7 +304,8 @@
                 </div>
                 <div class="row p-0 mt-4 m-0">
                     <div class="col-6 col-lg-3">                 
-                            <div class="trend mt-3">
+                            <div class="trend mt-3 position-relative">
+                               
                                 <img src="images/suggested/sug5.jpg" alt="">
                                 <div class="details d-flex flex-column">
                                     <div class="stars d-flex justify-content-start py-2 ms-2">
@@ -324,6 +325,7 @@
                                         <button onclick="addtocart(this)">Add To Cart</button>
                                     </div>
                                 </div>
+                                
                             </div>
                     </div>
                     <div class="col-6 col-lg-3">                 
@@ -861,6 +863,16 @@
     
     </div>
     <script>
+        //heart adding
+        var trend=document.querySelectorAll(".trend");
+        trend.forEach((value) => {
+            value.innerHTML+=`
+            <div class="heart" >
+                <i class="fa-solid fa-heart" onclick="heart(this)"></i>
+            </div>
+            `
+        })
+
                 //aos adding
             var first_carosal=document.querySelectorAll('.first-carosal')
             var second_carosal=document.querySelectorAll('.second-carosal')
@@ -873,7 +885,6 @@
                 value.setAttribute("data-aos-duration","500");
             })
 
-            var trend=document.querySelectorAll(".trend");
             var image=document.querySelectorAll('.image');
             var cosmetics=document.querySelectorAll('.col-4');
             image.forEach((value) => {
