@@ -1,63 +1,10 @@
-// const email=document.getElementById("email");
-// const password=document.getElementById("password");
-// const uname=document.getElementById("uname");
-// uname.focus();   
-// var form=document.getElementsByClassName("myform")[0];
-// var eyebtn=document.getElementById("eye");
-// var clear=document.getElementById("clear");
-// var abs=document.getElementsByClassName("abs")[0];
-
-// // eye button that reveals the password
-
-// eyebtn.addEventListener('click', ()=>{
-//    password.classList.toggle("show");
-    
-//    if(password.classList.contains("show")){
-//        password.setAttribute("type","text");
-//        eyebtn.src="images/eyeopen.png";
-//     }
-//     else if(!(password.classList.contains("show"))) {
-//         password.setAttribute("type","password");
-//         eyebtn.src="images/eyeclose.png"
-//    }
-// })
-
-// //form submit event and localstorage assigining
-
-// form.addEventListener('submit', (e)=>{
-//     e.preventDefault();
-//     if(localStorage.getItem("username")){
-//         abs.classList.add("abs2");
-//         setTimeout(() => {
-//         abs.classList.remove("abs2");
-//     }, 4000);
-//     setTimeout(()=>{
-//         window.location.assign("index2.html");
-//     },3000)
-//     }
-//     else{
-        // const userName=uname.value;
-        // const userEmail=email.value;
-        // const userPassword=password.value;
-        // localStorage.setItem("username",userName);
-        // localStorage.setItem("useremail",userEmail);
-        // localStorage.setItem("userpassword",userPassword);
-        // window.location.assign("index2.html");
-//     }
-// });
-// clear.addEventListener('click',()=>{
-//     const data_array=["username","useremail","userpassword"];
-//     data_array.forEach((item)=>{
-//         localStorage.removeItem(item);
-//     })
-// })
-
-
 submit();
 
 function submit(){
     var display_none=document.querySelector('.account-login');
+    var userNameShowing=document.querySelector('.userNameShowing');
     if(localStorage.getItem("username")){
+        userNameShowing.innerHTML=`<h4><b>hi ${localStorage.getItem("username")}!</b></h4>`;
         setTimeout(()=>{
         display_none.innerHTML=
         `<div class="user_details d-flex flex-column align-items-center justify-content-center">
@@ -75,8 +22,8 @@ else{
     `
     <form onsubmit="submitted()">
     <div class="account-input d-flex flex-column justify-content-center align-items-center">
-    <input type="text" class="user_email" placeholder="Email" id="uname" required>
-    <input type="text" class="user_name" placeholder="Name" id="email" required>
+    <input type="text" class="user_name" placeholder="User Name" id="uname" required>
+    <input type="email" class="user_email" placeholder="Email" id="email" required>
     <input type="password" class="user_password" placeholder="Password" id="password" required>
     <button class="btn btn-success"  >LOGIN</button>
     </div>
@@ -107,3 +54,11 @@ function logout(){
     })
     submit();
 }
+
+// var signup=document.getElementsByClassName("signup");
+// signup[0].addEventListener('click', ()=>{
+// let text_reset1=document.querySelector('.text-reset1');
+// let text_reset2=document.querySelector('.text-reset2');
+// text_reset1.click();
+// text_reset2.click();
+// })

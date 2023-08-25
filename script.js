@@ -4,9 +4,7 @@ var typing = new Typed(".text-content", {
     " \"At Shop Drop, we're dedicated to bringing you a seamless and exciting shopping experience. With a carefully curated selection of products that cater to your diverse needs, we're here to redefine the way you shop.\"",
   ],
   typeSpeed: 20,
-  // backSpeed: 10,
-  // loop: true,
-  showCursor: false,
+  showCursor: false
 });
 
 new Glider(document.querySelector(".glider"), {
@@ -15,7 +13,6 @@ new Glider(document.querySelector(".glider"), {
   scrollLock: true,
   dots: "#dots",
   rewind: true,
-  // draggable:true,
   responsive: [
     {
       breakpoint: 550,
@@ -41,17 +38,13 @@ document.onselectstart = (event) => {
   event.preventDefault();
 };
 new Glider(document.querySelector(".glider2"), {
-  // Mobile-first defaults
   slidesToShow: 5,
   slidesToScroll: 1,
-  // draggable:true,
   dots: "#resp-dots",
   responsive: [
     {
-      // screens greater than >= 775px
       breakpoint: 600,
       settings: {
-        // Set to `auto` and provide item width to adjust to viewport
         slidesToShow: 4,
         slidesToScroll: 0.2,
         itemWidth: 150,
@@ -59,7 +52,6 @@ new Glider(document.querySelector(".glider2"), {
       },
     },
     {
-      // screens greater than >= 1024px
       breakpoint: 1224,
       settings: {
         slidesToShow: 5,
@@ -108,20 +100,7 @@ function showmore() {
       </div>`;
     }
     showmore.remove();
-    // showmore.innerText = "Show less";
   }
-  // else if (showmore.innerText == "Show less") {
-  //   console.log(showing);
-  //   showing.innerHTML = "";
-  //   for (let i = 0; i < 4; i++) {
-  //     showing.innerHTML += `<div class="col-6 col-lg-3 py-1">
-  //         <div class="each each4">
-  //         <img src="${arr[i]}" alt="no image avail">
-  //     </div>
-  // </div>`;
-  //   }
-  //   showmore.innerText = "Show more";
-  // }
 }
 
 // addtocart
@@ -137,6 +116,8 @@ function addtocart(btn) {
   );
   addtocartpage(product_image, product_name, product_price, id_value);
 }
+
+
 var item_count = document.querySelector(".items-count");
 function addtocartpage(p_image, p_name, p_price, p_id) {
   if (p_array.includes(p_id)) {
@@ -153,6 +134,7 @@ function addtocartpage(p_image, p_name, p_price, p_id) {
       alert.style.display = "none";
     }, 1000);
     p_array.push(p_id);
+    empty();
     item_count.innerHTML = p_array.length;
     realcart.innerHTML += `
     <div class="products d-flex mt-2">
@@ -188,11 +170,20 @@ function totals() {
 }
 empty();
 function empty(){
-  if(p_array<=1){
-    realcart.innerHTML="Your cart is empty";
+  var hide_checkout=document.querySelector('.total');
+  var emptyOrnot=document.querySelector('.emptyOrnot');
+  if(p_array.length<1){
+    hide_checkout.classList.add("emptyed")
+    hide_checkout.classList.remove("notemptyed")
+    emptyOrnot.classList.add("emptyed");
+    emptyOrnot.classList.remove("notemptyed");
   }
   else{
-   return;
+    hide_checkout.classList.remove("emptyed")
+    hide_checkout.classList.add("notemptyed")
+    emptyOrnot.classList.remove("emptyed");
+    emptyOrnot.classList.add("notemptyed");
+
   }
 }
 function minus(btn) {
@@ -257,4 +248,16 @@ function heart(heart_paren) {
     heart_paren.style.color = "white";
     heart_paren.style.backgroundColor = "transparent";
   }
+}
+
+
+
+function continueshop(){
+  var continue_shop=document.querySelector('.continue_shopping');
+  continue_shop.addEventListener('click', ()=>{
+    let text_reset1=document.querySelector('.text-reset1');
+  // let text_reset2=document.querySelector('.text-reset2');
+  text_reset1.click();
+  // text_reset2.click();
+  })
 }

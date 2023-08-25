@@ -275,6 +275,18 @@ body{
     transform: translateX(-50%);
     z-index: 20;
 }
+.emptyOrnot.emptyed{
+    display: block;
+}
+.emptyOrnot.notemptyed{
+    display: none;
+}
+.total.emptyed{
+    display: none;
+}
+.total.notemptyed{
+    display: block;
+}
 .alerting-delete{
     display: none;
     position: absolute;

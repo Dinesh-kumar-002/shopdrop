@@ -87,7 +87,7 @@
                         aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
                             <h5 id="offcanvasRightLabel">My Account</h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            <button type="button" class="btn-close text-reset text-reset2" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
@@ -120,7 +120,7 @@
                             <img src="images/carts.png" alt="Cart" class="cart-image">
                             <h5 id="offcanvasRightLabel" class="ms-1 mb-0"><b>CART</b></h5>
                         </div>
-                        <button type="button" class=" btn btn-close text-reset" data-bs-dismiss="offcanvas"
+                        <button type="button" class=" btn btn-close text-reset text-reset1" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                         <div class="alerting-delete">
                             <div class="alert alert-primary d-flex justify-content-center align-items-center" role="alert">
@@ -137,6 +137,13 @@
                         </div>
                     </div>
                     <div class="offcanvas-body realcart position-relative">
+                        <div class="userNameShowing text-center"></div>
+                        <!-- <button class=" btn btn-warning border-0 rounded-2 signup my-3 w-100">LOGIN</button> -->
+                        <div class="emptyOrnot text-center mt-5">
+                            <h5 class="text">Your cart is empty</h5>
+                            <button class=" btn btn-success border-0 rounded-2 continue_shopping my-3" onclick="continueshop()"><b>CONTINUE SHOP</b></button>
+
+                        </div>
                         
                     </div>
                         <div class="total">
@@ -875,7 +882,6 @@
             </div>
             `
         })
-
                 //aos adding
             var first_carosal=document.querySelectorAll('.first-carosal')
             var second_carosal=document.querySelectorAll('.second-carosal')
