@@ -77,16 +77,16 @@ function showmore() {
   var showing = document.querySelector(".showing");
   var showmore = document.querySelector(".showmore");
   var arr = [
-    "images/today/men1.jpg",
-    "images/today/men2.jpg",
-    "images/today/men3.jpg",
-    "images/today/men4.jpg",
-    "images/today/men5.jpg",
-    "images/today/men1.jpg",
-    "images/today/men2.jpg",
-    "images/today/men3.jpg",
-    "images/today/men4.jpg",
-    "images/today/men5.jpg",
+    "assets/images/today/men1.jpg",
+    "assets/images/today/men2.jpg",
+    "assets/images/today/men3.jpg",
+    "assets/images/today/men4.jpg",
+    "assets/images/today/men5.jpg",
+    "assets/images/today/men1.jpg",
+    "assets/images/today/men2.jpg",
+    "assets/images/today/men3.jpg",
+    "assets/images/today/men4.jpg",
+    "assets/images/today/men5.jpg",
   ];
   // debugger;
   if (showmore.innerText == "Show more") {

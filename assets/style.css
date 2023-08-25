@@ -68,7 +68,7 @@ body{
     display: none;
 }
 .searching{
-    padding: 20px 0 !important;
+    padding: 10px 0 !important;
     width: 100%;
     background-color: darkseagreen;
 }
@@ -706,7 +706,7 @@ body{
         z-index: 30;
     }
     .navsmall{
-        position: sticky;
+        position: FIXED;
         width: 100%;
         top: 80px;
         z-index: 10;
@@ -732,5 +732,11 @@ body{
     }
    .footer{
     padding-left: 20px;
+   }
+   .searching{
+    z-index: 20;
+    position: sticky;
+    top: 136px;
+    margin-bottom: 120px;
    }
 }
