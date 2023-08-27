@@ -229,13 +229,13 @@ function subtotal(btn, val) {
   console.log(subtotal, subtotal_id, btn);
   totals();
 }
-function heart(heart_paren) {
-  if (heart_paren.style.color == "white") {
-    heart_paren.style.color = "red";
-    heart_paren.style.backgroundColor = "rgba(255, 255, 255, 0.304)";
+function heart(heartElement) {
+  if (heartElement.style.color === "white" || heartElement.style.color === "") {
+    heartElement.style.color = "red";
+    heartElement.style.backgroundColor = "rgba(255, 255, 255, 0.304)";
   } else {
-    heart_paren.style.color = "white";
-    heart_paren.style.backgroundColor = "transparent";
+    heartElement.style.color = "white";
+    heartElement.style.backgroundColor = "transparent";
   }
 }
 
