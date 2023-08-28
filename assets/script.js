@@ -229,26 +229,20 @@ function subtotal(btn, val) {
   console.log(subtotal, subtotal_id, btn);
   totals();
 }
-function heart(heartElement) {
-  if (heartElement.style.color === "white" || heartElement.style.color === "") {
-    heartElement.style.color = "red";
-    heartElement.style.backgroundColor = "rgba(255, 255, 255, 0.304)";
+function heart(heart_paren) {
+  if (heart_paren.style.color == "white" || heart_paren.style.color=="") {
+    heart_paren.style.color = "red";
+    heart_paren.style.backgroundColor = "rgba(255, 255, 255, 0.304)";
   } else {
-    heartElement.style.color = "white";
-    heartElement.style.backgroundColor = "transparent";
+    heart_paren.style.color = "white";
+    heart_paren.style.backgroundColor = "transparent";
   }
 }
 
 
 
 function continueshop(){
-  var continue_shop=document.querySelector('.continue_shopping');
-  continue_shop.addEventListener('click', ()=>{
-    let text_reset1=document.querySelector('.text-reset1');
-  // let text_reset2=document.querySelector('.text-reset2');
-  text_reset1.click();
-  // text_reset2.click();
-  })
+    document.querySelector('.text-reset1').click();
 }
 
 submit();
@@ -257,7 +251,7 @@ function submit(){
     var display_none=document.querySelector('.account-login');
     var userNameShowing=document.querySelector('.userNameShowing');
     if(localStorage.getItem("username")){
-        userNameShowing.innerHTML=`<h4><b>hi ${localStorage.getItem("username")}!</b></h4>`;
+        userNameShowing.innerHTML=`<h4 class="my-3"><b>hi ${localStorage.getItem("username")}!</b></h4>`;
         setTimeout(()=>{
         display_none.innerHTML=
         `<div class="user_details d-flex flex-column align-items-center justify-content-center">
